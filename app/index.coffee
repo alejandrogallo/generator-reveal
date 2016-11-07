@@ -88,6 +88,7 @@ module.exports = class RevealGenerator extends generators.Base
                 @config.set 'presentationTitle', props.presentationTitle
                 @config.set 'packageVersion', props.packageVersion
                 @config.set 'useSass', props.useSass
+                @config.set 'useMathJax', props.useMathJax
                 @config.set 'revealTheme', props.revealTheme
                 @config.set 'deployToGithubPages', props.deployToGithubPages
                 @config.set 'githubUsername', props.githubUsername
