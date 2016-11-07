@@ -19,6 +19,7 @@ module.exports = class RevealGenerator extends generators.Base
             packageVersion: '0.0.0'
             revealTheme: 'black'
             useSass: false
+            useMathJax: false
             deployToGithubPages: false
 
     prompting:
@@ -48,6 +49,12 @@ module.exports = class RevealGenerator extends generators.Base
                     message: 'Do you want to use Sass to create a custom theme?'
                     type: 'confirm'
                     default: @config.get 'useSass'
+                }
+                {
+                    name: 'useMathJax'
+                    message: 'Do you want to use MathJax to embed TeX in the presentation?'
+                    type: 'confirm'
+                    default: @config.get 'useMathJax'
                 }
                 {
                     name: 'revealTheme'

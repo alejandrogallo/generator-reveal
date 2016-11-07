@@ -29,6 +29,7 @@
             link.href = window.location.search.match( /print-pdf/gi ) ? 'bower_components/reveal.js/css/print/pdf.css' : 'bower_components/reveal.js/css/print/paper.css';
             document.getElementsByTagName( 'head' )[0].appendChild( link );
         </script>
+    <% if (config.get('useMathJax')) { %>
         <!--MATHJAX (TeX)-->
         <script src="bower_components/MathJax/MathJax.js?config=TeX-AMS-MML_HTMLorMML" type="text/javascript"></script>
         <script type="text/x-mathjax-config">
@@ -36,6 +37,7 @@
           tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]}
         });
         </script>
+    <% } %>
         <!--[if lt IE 9]>
         <script src="bower_components/reveal.js/lib/js/html5shiv.js"></script>
         <![endif]-->
