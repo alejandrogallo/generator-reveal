@@ -9,4 +9,4 @@ dist:
 	grunt dist
 
 slide:
-	yo reveal:slide "$(read -p 'Slide title?: ' && echo $REPLY)"
+	@read -p 'Slide title?: ' title && yo reveal:slide "$$title"
