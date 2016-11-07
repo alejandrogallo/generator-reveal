@@ -8,3 +8,8 @@ From the terminal, pop in:
 Available options:
 
  ```--markdown --attributes --notes```
+
+<% if (config.get('useMathJax')) { %>
+  With MaThJaX
+  $$ \int \int \sum \Psi $$
+<% } %>
