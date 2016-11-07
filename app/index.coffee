@@ -101,6 +101,7 @@ module.exports = class RevealGenerator extends generators.Base
 
             @fs.copyTpl @templatePath('_package.json'), @destinationPath('package.json'), {slugify: slugify, config: @config}
             @fs.copyTpl @templatePath('_bower.json'), @destinationPath('bower.json'), {slugify: slugify, config: @config}
+            @fs.copy @templatePath('_Makefile'), @destinationPath('Makefile')
             @fs.copy @templatePath('loadhtmlslides.js'), @destinationPath('js/loadhtmlslides.js')
             @fs.copy @templatePath('list.json'), @destinationPath('slides/list.json')
             @fs.copy @templatePath('theme.scss'), @destinationPath('css/source/theme.scss') if @config.get 'useSass'

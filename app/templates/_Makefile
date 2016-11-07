@@ -1,0 +1,12 @@
+init:
+	npm install
+	bower install
+
+watch:
+	grunt
+
+dist:
+	grunt dist
+
+slide:
+	yo reveal:slide "$(read -p 'Slide title?: ' && echo $REPLY)"
